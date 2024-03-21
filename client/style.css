@@ -1,0 +1,48 @@
+
+.sakHolder{
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    background-color: gray;
+    color: white;
+    margin: 4vw;
+}
+.problemHolder{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+.problem{
+    text-align: center;
+    width: 80%;
+    font-size: 2vw;
+}
+.sak{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.client, .saksnummer, .dato{
+    width: 100%;
+    text-align: center;
+    font-size: 2.1vw;
+}
+
+.claimTicket{
+    background-color: white;
+    padding: 1vw;
+    color: gray;
+    border-radius: 5vw;
+    cursor: pointer;
+}
+.hiddenForm{
+    display: none;
+    overflow: hidden;
+}
+.ticketOptions{
+    height: 10vh;
+    color: gray;
+    border: none;
+}
