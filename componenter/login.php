@@ -19,9 +19,6 @@
         echo "<a href='../client/inlogging.php'>login failed try again</a>";
     }
     while ($row = mysqli_fetch_assoc($users)) {
-        echo $row["username"];
-        echo "<br>";
-        echo $row["password"];
         $_SESSION["username"] = $row["username"];
         $_SESSION["email"] = $row["email"];
         $_SESSION["security"] = $row["accessLvl"];
