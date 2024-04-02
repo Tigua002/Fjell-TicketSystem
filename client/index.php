@@ -17,20 +17,23 @@
         echo "<br>
         <a href='./logout.php'>Log out</a>";
         echo "<br>
-        <a href='./ticketStatus.php'>Ticked Statuses</a>";
+        <a href='./ticketStatus.php'>Your Tickets</a>";
         
         if ($_SESSION["security"] == "admin" || $_SESSION["security"] == "god") {
             echo "<br>
             <br>
             <br>
             <br>";
-            echo "<a href='./ticketmanager.php'>manage tickets</a>";
+            echo "<a href='./ticketmanager.php'>Untouched tickets</a>";
             echo "<br>";
-            echo "<a href='./claimedTickets.php'>claimed tickets</a>";
+            echo "<a href='./claimedTickets.php'>Claimed tickets</a>";
         }
         if ($_SESSION["security"] == "god"){
             echo " <br>
+            <br>
             <a href='./accessLvls.php'>Manage access levels</a>";
+            echo " <br>
+            <a href='./allTickets.php'>All Tickets</a>";
             
         }
     } else {

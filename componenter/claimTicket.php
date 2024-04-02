@@ -11,7 +11,7 @@
     $ticketNumber = $_GET["number"];
     $adminName = $_SESSION["username"];
     $query = "UPDATE tickets SET ansvarlig = '$adminName', status='claimed'  WHERE saksnummer = $ticketNumber";
-    $conn-> query($query);
+    $conn->query($query);
     header("Location: ../client/ticketmanager.php");
     ?>
 </body>
