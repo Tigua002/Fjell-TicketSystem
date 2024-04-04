@@ -14,6 +14,7 @@
     }
     ?>
     <form action="../componenter/report.php" class="reportForm">
+        <a href="./index.php">Return</a>
         <input type="text" placeholder="Name" name="name" required>
         <input type="email" placeholder="email" name="email" required>
         <textarea type="text" placeholder="Describe your problem" rows="5" columns="20" name="problem"
@@ -24,7 +25,6 @@
                 <option value="new">New Equpment</option>
                 <option value="repairs">Repairs</option>
             </select required>
-        <a href="./index.php">Return</a>
         <input type="submit" value="submit problem">
     </form>
 </body>

@@ -3,9 +3,9 @@ CREATE TABLE IF NOT EXISTS `tickets` (
   `saksBeskrivelse` LONGTEXT NULL,
   `client` VARCHAR(100) NULL,
   `clientmail` VARCHAR(100) NULL,
-  `status` VARCHAR(45) NULL,
-  `Ansvarlig` VARCHAR(100) NULL,
-  `saksDATO` DATE GENERATED ALWAYS AS () VIRTUAL,
+  `status` VARCHAR(45) DEFAULT 'untouched',
+  `Ansvarlig` VARCHAR(100) NULL DEFAULT 'NONE',
+  `saksDATO` DATE DEFAULT CURRENT_TIMESTAMP(),
   `category` VARCHAR(100) NULL DEFAULT 'other',
   PRIMARY KEY (`saksnummer`));
 
@@ -19,6 +19,6 @@ CREATE TABLE IF NOT EXISTS `tickets` (
   PRIMARY KEY (`userID`));
 
 
-  INSERT INTO users (username, password, email, accessLvl) VALUES ('timuradmin', 'godmode', 'timur@godmode.com', 'god');
+  INSERT INTO users (username, password, email, accessLvl) VALUES ('administrator', 'godmode', 'timur@godmode.com', 'god');
   INSERT INTO users (username, password, email) VALUES ('Timur', 'Timur', 'timur@timur.com');
-  INSERT INTO tickets (saksBeskrivelse, client, clientmail, category) VALUES ('Help! my server leaked internal CIA documents', 'Timur', 'timur@timur.com', 'other');
+  INSERT INTO tickets (saksBeskrivelse, client, clientmail) VALUES ('Help! my server leaked internal CIA documents', 'Timur', 'timur@timur.com');

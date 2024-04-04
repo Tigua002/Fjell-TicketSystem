@@ -1,4 +1,6 @@
-
+body{
+    min-height: 100vh;
+}
 .sakHolder{
     display: flex;
     flex-direction: column;
@@ -45,4 +47,25 @@
     height: 10vh;
     color: gray;
     border: none;
+}
+.indexLink{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(77, 77, 255);
+    padding: 2vw;
+    margin: 1vw;
+    border-radius: 2vw;
+    max-width: 20vw;
+    font-size: 2vw;
+}
+.linksHolder{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    margin-top: 4vw;
 }

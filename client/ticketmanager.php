@@ -35,6 +35,7 @@
             </div>
             <div class='problemHolder'>
                 <h1 onclick='claimTicket($saksnummer)' class='claimTicket'>Claim Ticket</h1>
+                <h1 onclick='DeleteTicket($saksnummer)' class='claimTicket'>Delete Ticket</h1>
             </div>
         </div>
         ";
@@ -46,10 +47,18 @@
         <input type="text" id="ticketNumber" name="number">
         <input type="submit" id="hiddenSubmit">
     </form>
+    <form action="../componenter/DeleteTicket.php" class='hiddenForm'>
+        <input type="text" id="ticketDelete" name="number">
+        <input type="submit" id="submitDelete">
+    </form>
     <script>
         function claimTicket(saksnummer) {
             document.getElementById("ticketNumber").value = saksnummer
             document.getElementById("hiddenSubmit").click()
+        }
+        function DeleteTicket(saksnummer) {
+            document.getElementById("ticketDelete").value = saksnummer
+            document.getElementById("submitDelete").click()
         }
     </script>
 </body>
